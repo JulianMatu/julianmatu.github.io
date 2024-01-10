@@ -1,43 +1,89 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
 
     <title>Julian Matuszewski's Resume Page</title>
-
+    <link rel="stylesheet" href="site.css" />
 </head>
 
 <body>
 
-    <header>
-        <h1>Julian Matuszewski</h1>
-        <img src="/img/placeholder-profile.gif"
-             alt="Julian Matuszewski" /> 
+    <div class="container">
+        <header>
+            <img id="headshot" src="/img/placeholder-profile.gif" alt="Julian Matuszewski" />
+            <h1 id="siteName">Julian Matuszewski</h1>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-    </header>
+            <ul id="menu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </header>
 
-    <main>
-        <p><strong>Purpose:</strong> This is a resume (or CV) to help me to get a job in web development.</p>
+        <main>
+            <p><strong>Purpose:</strong> This is a resume (or CV) to help me to get a job in web development.</p>
 
-        <h2>Experience</h2>
-        <div>
-            <p>CVS - Healthcare Company - 2012-2019</p>
-            <p>Worked Register and did inventory.</p>
-        </div>
+            <h2>Experience</h2>
+            <div class="experience">
+                <p class="title">CVS - Healthcare Company - 2012-2019</p>
+                <p>Worked Register and did inventory.</p>
+            </div>
 
-        <div>
-            <p>McDonalds - Not a Healthcare Company - 2006-2012</p>
-            <p>Fries and burger.</p>
-        </div>
-    </main>
+            <div class="experience">
+                <p class="title">McDonalds - Totally Not a Healthcare Company - 2006-2012</p>
+                <p>Fries and burger.</p>
+            </div>
 
-    <footer>
-        &copy; 2024 Copyright - Julian Matuszewski
-    </footer>
+            <div class="experience">
+                <p class="title">Self-Employed - Mowing Lawns - 2004-2005</p>
+                <p>Mostly for my dad</p>
+            </div>
+        </main>
+
+        <aside>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div id="formInfo"></div>
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" type="text" />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" />
+                </div>
+
+                <div>
+                    <select id="subject">
+                        <option>Job Offer</option>
+                        <option>Personal Message</option>
+                        <option>Complaint</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="msg">Message</label>
+                </div>
+
+                <div>
+                    <textarea id="msg" rows="4"></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Send Mail" />
+                </div>
+            </form>
+        </aside>
+
+        <footer>
+            &copy; 2024 Copyright - Julian Matuszewski
+        </footer>
+
+    </div>
+    <script src="dist/main.js"></script>
 
 </body>
 
